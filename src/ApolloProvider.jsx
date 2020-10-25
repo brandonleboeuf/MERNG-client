@@ -9,9 +9,8 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { setContext } from 'apollo-link-context';
 
 const httpLink = createHttpLink({
-  // TODO: Should change for production
   // points to graphQL server
-  uri: 'http://localhost:5000',
+  uri: 'https://boiling-brook-72187.herokuapp.com/',
 });
 
 const authLink = setContext(() => {
