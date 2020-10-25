@@ -34,8 +34,7 @@ function DeleteButton({ postId, commentId, callback }) {
   return (
     <>
       <MyPopup
-        content={commentId ? 'Delete comment' : 'Delete post'}
-        trigger={
+        content={commentId ? 'Delete comment' : 'Delete post'}>
           <Button
             as="div"
             color="red"
@@ -44,8 +43,7 @@ function DeleteButton({ postId, commentId, callback }) {
           >
             <Icon name="trash" style={{ margin: 0 }} />
           </Button>
-        }
-      />
+        </MyPopup>
       <Confirm
         open={confirmOpen}
         onCancel={() => setConfirmOpen(false)}
