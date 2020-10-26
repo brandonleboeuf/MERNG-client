@@ -7,7 +7,7 @@ import { useForm } from '../util/hooks';
 
 const Register = (props) => {
   const context = useContext(AuthContext);
-  const [errors] = useState({});
+  const [errors, setErrors] = useState({});
 
   const { onChange, onSubmit, values } = useForm(registerUser, {
     userName: '',
@@ -19,14 +19,20 @@ const Register = (props) => {
   const [addUser, { loading }] = useMutation(REGISTER_USER, {
     update(_, { data: { regester: userData } }) {
       context.login(userData);
-      props.history.push('/');
     },
-    onError(err) {},
+    onError(err) {
+      setErrors(err.graphQLErrors[0].extensions.exception.errors);
+    },
     variables: values,
   });
 
   function registerUser() {
     addUser();
+    toHomePage();
+  }
+
+  function toHomePage() {
+    props.history.push('/');
   }
 
   return (
