@@ -15,14 +15,15 @@ function PostCard({
 
   return (
     <Card fluid>
-      <Card.Content>
+      <Card.Content as={Link} to={`/posts/${id}`}>
         <Image
           floated="right"
           size="mini"
-          src="https://react.semantic-ui.com/images/avatar/large/molly.png"
+          style={{borderRadus: "10px"}}
+          src={userName === "Brandon_LeBoeuf" ? "https://avatars3.githubusercontent.com/u/54607186?s=400&u=6b83490323e35808fae23a82d4cef7c6de5ee7cf&v=4" : "https://react.semantic-ui.com/images/avatar/large/molly.png"}
         />
         <Card.Header>{userName}</Card.Header>
-        <Card.Meta as={Link} to={`/posts/${id}`}>
+        <Card.Meta>
           {moment(createdAt).fromNow(true)}
         </Card.Meta>
         <Card.Description>{body}</Card.Description>
