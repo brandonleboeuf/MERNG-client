@@ -18,7 +18,7 @@ function Home() {
   }, [data]);
 
   return (
-    <Grid columns={3}>
+    <Grid stackable columns={3}>
       <Grid.Row
         className="page-title"
         style={{
