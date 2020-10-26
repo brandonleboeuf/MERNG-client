@@ -7,3 +7,7 @@
 .ui.teal.buttons .button:focus {
   background-color: #00b5ad;
 }
+
+body {
+  background-color: #8080801f;
+}
