@@ -37,7 +37,15 @@ function Home() {
         </Grid.Column>
       )}
       {loading ? (
-        <h1>Loading posts...</h1>
+        <>
+          {/* <h1>Loading posts...</h1> */}
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </>
       ) : (
         <Transition.Group>
           {data &&
