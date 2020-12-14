@@ -21,7 +21,7 @@ function PostCard({
         <Image
           floated="right"
           size="mini"
-          style={{borderRadus: "10px"}}
+          style={{borderRadius: "10px"}}
           src={userName === "Brandon_LeBoeuf" ? "https://avatars3.githubusercontent.com/u/54607186?s=400&u=6b83490323e35808fae23a82d4cef7c6de5ee7cf&v=4" : `https://randomuser.me/api/portraits/thumb/men/${imgNum}.jpg`}
         />
         <Card.Header>{userName}</Card.Header>
