@@ -66,14 +66,15 @@ function SinglePost(props) {
     postMarkup = (
       <Grid>
         <Grid.Row>
-          <Grid.Column width={5}>
+          <Grid.Column width={4}>
             <Image
               src={userName === "Brandon_LeBoeuf" ? "https://avatars3.githubusercontent.com/u/54607186?s=400&u=6b83490323e35808fae23a82d4cef7c6de5ee7cf&v=4" : `https://randomuser.me/api/portraits/med/men/${imgNum}.jpg`}
               size="small"
               floated="right"
+              style={{borderRadius: "10px"}}
             />
           </Grid.Column>
-          <Grid.Column width={15}>
+          <Grid.Column width={12}>
             <Card fluid>
               <Card.Content>
                 <Card.Header>{userName}</Card.Header>
