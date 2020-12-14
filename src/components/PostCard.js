@@ -13,6 +13,8 @@ function PostCard({
 }) {
   const { user } = useContext(AuthContext);
 
+  let imgNum = Math.floor(Math.random() * Math.floor(100))
+
   return (
     <Card fluid>
       <Card.Content as={Link} to={`/posts/${id}`}>
@@ -20,7 +22,7 @@ function PostCard({
           floated="right"
           size="mini"
           style={{borderRadus: "10px"}}
-          src={userName === "Brandon_LeBoeuf" ? "https://avatars3.githubusercontent.com/u/54607186?s=400&u=6b83490323e35808fae23a82d4cef7c6de5ee7cf&v=4" : "https://react.semantic-ui.com/images/avatar/large/molly.png"}
+          src={userName === "Brandon_LeBoeuf" ? "https://avatars3.githubusercontent.com/u/54607186?s=400&u=6b83490323e35808fae23a82d4cef7c6de5ee7cf&v=4" : `https://randomuser.me/api/portraits/thumb/men/${imgNum}.jpg`}
         />
         <Card.Header>{userName}</Card.Header>
         <Card.Meta>
