@@ -73,7 +73,7 @@ function SinglePost(props) {
               floated="right"
             />
           </Grid.Column>
-          <Grid.Column width={13}>
+          <Grid.Column width={15}>
             <Card fluid>
               <Card.Content>
                 <Card.Header>{userName}</Card.Header>
